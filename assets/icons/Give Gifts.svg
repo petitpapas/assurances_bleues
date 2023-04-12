@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" fill="none" viewBox="0 0 35 34">
+  <path fill="#000" fill-opacity=".01" fill-rule="evenodd" d="M.5 34h34V0H.5v34Z" clip-rule="evenodd"/>
+  <path fill="#FE685A" fill-rule="evenodd" d="M21.278 17h9.444c1.044 0 1.888.845 1.888 1.888v13.224A1.888 1.888 0 0 1 30.722 34h-9.444a1.888 1.888 0 0 1-1.888-1.888V18.888c0-1.043.844-1.888 1.888-1.888m-17 0h9.444c1.044 0 1.89.845 1.89 1.888v13.224A1.889 1.889 0 0 1 13.722 34H4.278a1.887 1.887 0 0 1-1.888-1.888V18.888c0-1.043.844-1.888 1.888-1.888M2.39 7.556h30.22a1.89 1.89 0 0 1 1.89 1.89v1.888a1.889 1.889 0 0 1-1.89 1.888H2.39A1.889 1.889 0 0 1 .5 11.334V9.445a1.89 1.89 0 0 1 1.89-1.89" clip-rule="evenodd"/>
+  <mask id="a" width="17" height="8" x="9" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+    <path fill="#fff" fill-rule="evenodd" d="M9.945 0h15.11v7.937H9.946V0Z" clip-rule="evenodd"/>
+  </mask>
+  <g mask="url(#a)">
+    <path fill="#FE685A" fill-opacity=".3" fill-rule="evenodd" d="M22.12.318a1.888 1.888 0 1 1 2.095 3.142L17.5 7.937 10.786 3.46A1.888 1.888 0 1 1 12.882.318l4.619 3.078L22.119.318Z" clip-rule="evenodd"/>
+  </g>
+</svg>

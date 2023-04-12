@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 28 28">
+  <rect width="28" height="28" fill="#D8D8D8" rx="14"/>
+  <mask id="a" width="28" height="28" x="0" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+    <rect width="28" height="28" fill="#fff" rx="14"/>
+  </mask>
+  <g mask="url(#a)">
+    <rect width="39.2" height="28" x="-2" fill="#fff" rx="2"/>
+    <mask id="b" width="40" height="28" x="-2" y="0" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+      <rect width="39.2" height="28" x="-2" fill="#fff" rx="2"/>
+    </mask>
+    <g mask="url(#b)">
+      <path fill="#D02F44" fill-rule="evenodd" d="M37.2 0H-2v1.867h39.2V0Zm0 3.733H-2V5.6h39.2V3.733ZM-2 7.467h39.2v1.866H-2V7.467ZM37.2 11.2H-2v1.867h39.2V11.2ZM-2 14.933h39.2V16.8H-2v-1.867Zm39.2 3.734H-2v1.866h39.2v-1.866ZM-2 22.4h39.2v1.867H-2V22.4Zm39.2 3.733H-2V28h39.2v-1.867Z" clip-rule="evenodd"/>
+      <path fill="#46467F" d="M-2 0h16.8v13.067H-2z"/>
+      <g filter="url(#c)">
+        <path fill="url(#d)" fill-rule="evenodd" d="M.8 3.733a.933.933 0 1 0 0-1.866.933.933 0 0 0 0 1.866Zm3.733 0a.933.933 0 1 0 0-1.866.933.933 0 0 0 0 1.866ZM9.2 2.8a.933.933 0 1 1-1.867 0 .933.933 0 0 1 1.867 0Zm2.8.933a.933.933 0 1 0 0-1.866.933.933 0 0 0 0 1.866Zm-8.4.934a.933.933 0 1 1-1.867 0 .933.933 0 0 1 1.867 0Zm2.8.933a.933.933 0 1 0 0-1.867.933.933 0 0 0 0 1.867Zm4.667-.933a.933.933 0 1 1-1.867 0 .933.933 0 0 1 1.867 0Zm.933 2.8A.933.933 0 1 0 12 5.6a.933.933 0 0 0 0 1.867Zm-2.8-.934a.933.933 0 1 1-1.867 0 .933.933 0 0 1 1.867 0Zm-4.667.934a.933.933 0 1 0 0-1.867.933.933 0 0 0 0 1.867Zm-2.8-.934a.933.933 0 1 1-1.866 0 .933.933 0 0 1 1.866 0Zm.934 2.8a.933.933 0 1 0 0-1.866.933.933 0 0 0 0 1.866ZM7.333 8.4a.933.933 0 1 1-1.866 0 .933.933 0 0 1 1.866 0Zm2.8.933a.933.933 0 1 0 0-1.866.933.933 0 0 0 0 1.866Zm2.8.934a.933.933 0 1 1-1.866 0 .933.933 0 0 1 1.866 0Zm-4.666.933a.933.933 0 1 0 0-1.867.933.933 0 0 0 0 1.867Zm-2.8-.933a.933.933 0 1 1-1.867 0 .933.933 0 0 1 1.867 0ZM.8 11.2a.933.933 0 1 0 0-1.867.933.933 0 0 0 0 1.867Z" clip-rule="evenodd"/>
+      </g>
+    </g>
+  </g>
+  <defs>
+    <linearGradient id="d" x1="-.133" x2="-.133" y1="1.867" y2="11.2" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff"/>
+      <stop offset="1" stop-color="#F0F0F0"/>
+    </linearGradient>
+    <filter id="c" width="13.067" height="10.333" x="-.133" y="1.867" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+      <feOffset dy="1"/>
+      <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_0_1403"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow_0_1403" result="shape"/>
+    </filter>
+  </defs>
+</svg>

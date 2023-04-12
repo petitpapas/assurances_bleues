@@ -35,6 +35,12 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  flutter_svg: ^2.0.4
+  introduction_screen: ^3.1.7
+  flutter_slidable: ^2.0.0
+  font_awesome_flutter: ^10.4.0
+  sliver_tools: ^0.2.10
+
 
 dev_dependencies:
   flutter_test:
@@ -88,3 +94,23 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/presentation/
+
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/montserrat/Montserrat-Light.ttf
+          weight: 200
+        - asset: assets/fonts/montserrat/Montserrat-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/montserrat/Montserrat-SemiBold.ttf
+          weight: 500
+        - asset: assets/fonts/montserrat/Montserrat-Medium.ttf
+          weight: 600
+        - asset: assets/fonts/montserrat/Montserrat-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/montserrat/Montserrat-ExtraBold.ttf
+          weight: 900

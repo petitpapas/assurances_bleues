@@ -1,0 +1,29 @@
+import 'package:flutter/material.dart';
+
+import '../../../utils/dimensions.dart';
+import '../all_features_sections.dart';
+
+class SoftwareCopyrightScreen extends StatelessWidget {
+  const SoftwareCopyrightScreen({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(Dimensions.PADDING_SIZE_DEFAULT),
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            SoftwareCopyrightSection(),
+            SizedBox(height: Dimensions.PADDING_SIZE_DEFAULT),
+            OrderFoodOnlineSection(),
+            SizedBox(height: Dimensions.PADDING_SIZE_DEFAULT),
+            FunctionSection(),
+          ],
+        ),
+      ),
+    );
+  }
+}
