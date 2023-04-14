@@ -11,6 +11,9 @@ import '../../src/utils/color_resources.dart';
 import '../../src/utils/dimensions.dart';
 import '../../src/utils/images.dart';
 import '../../src/utils/styles.dart';
+import '../app_theme.dart';
+import '../bottom_navigation_view/bottom_bar_view.dart';
+import '../bottom_navigation_view/tabIcon_data.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -19,8 +22,8 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
+class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
+  late AnimationController? animationController;
 
   final searchTextController = TextEditingController();
 
@@ -29,10 +32,12 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
   bool showSearchingScreen = false;
   late FocusNode focusNode;
 
+  Widget tabBody = Container(
+    color: AppTheme.background,
+  );
+
   @override
   void initState() {
-    super.initState();
-    _controller = AnimationController(vsync: this);
     focusNode = FocusNode();
     focusNode.addListener(_onFocusChange);
     searchTextController.addListener(() {
@@ -46,11 +51,22 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
         });
       }
     });
+
+    tabIconsList.forEach((TabIconData tab) {
+      tab.isSelected = false;
+    });
+    tabIconsList[0].isSelected = true;
+
+    animationController = AnimationController(
+        duration: const Duration(milliseconds: 600), vsync: this);
+    tabBody = OverviewScreen(animationController: animationController);
+
+    super.initState();
   }
 
   @override
   void dispose() {
-    _controller.dispose();
+    animationController?.dispose();
     super.dispose();
   }
 
@@ -64,11 +80,63 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
     }
   }
 
+  List<TabIconData> tabIconsList = TabIconData.tabIconsList;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: OverviewScreen(),
+    return Container(
+      color: AppTheme.background,
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        // body: OverviewScreen(),
+        // bottomNavigationBar: BottomBarView(
+        //   tabIconsList: tabIconsList,
+        //   addClick: () {},
+        // ),
+        body: Stack(
+          children: [
+            tabBody,
+            bottomBar(),
+          ],
+        )
+      ),
+    );
+  }
+
+  Widget bottomBar() {
+    return Column(
+      children: <Widget>[
+        const Expanded(
+          child: SizedBox(),
+        ),
+        BottomBarView(
+          tabIconsList: tabIconsList,
+          addClick: () {},
+          changeIndex: (int index) {
+            if (index == 0 || index == 2) {
+              animationController?.reverse().then<dynamic>((data) {
+                if (!mounted) {
+                  return;
+                }
+                setState(() {
+                  tabBody =
+                      OverviewScreen(animationController: animationController);
+                });
+              });
+            } else if (index == 1 || index == 3) {
+              animationController?.reverse().then<dynamic>((data) {
+                if (!mounted) {
+                  return;
+                }
+                setState(() {
+                  tabBody =
+                      OverviewScreen(animationController: animationController);
+                });
+              });
+            }
+          },
+        ),
+      ],
     );
   }
 }

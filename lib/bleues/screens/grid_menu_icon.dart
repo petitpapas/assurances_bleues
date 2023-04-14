@@ -32,8 +32,8 @@ class GridMenuIcon extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Container(
-                width: size * .65,
-                height: size * .65,
+                width: size * .60,
+                height: size * .60,
                 padding: EdgeInsets.all(padding), // border width
                 decoration: decoration ?? BoxDecoration(
                     color: gridModel.bgColor,
@@ -53,7 +53,7 @@ class GridMenuIcon extends StatelessWidget {
                 child: Text(gridModel.title,
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: 9, color: textColor
+                    fontSize: 12, color: textColor
                   ),
               ),)
             ],
